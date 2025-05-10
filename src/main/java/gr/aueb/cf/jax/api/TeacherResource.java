@@ -22,7 +22,7 @@ public class TeacherResource {
      */
     @GET
     @Path("/{id}")
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)  // response - @Produces / request - @Consumes
     public Response getTeacher(@PathParam("id")Long id) {  // data binding του param στο Long id
         TeacherReadOnlyDTO dto = new TeacherReadOnlyDTO(id, "12345", "Alice", "W.");
 
